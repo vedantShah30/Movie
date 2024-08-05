@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="script.js" defer></script>
+    <title>Book Vedant's Show</title>
+</head>
+<body>
+    <nav>
+        <ul class="nav-menu">
+            <li><img src="movie.png" alt="Film Clip" class="nav-logo"></li>
+            <li><a href="#">Home Page</a></li>
+            <li><a href="#">Films</a></li>
+            <li><a href="#">Cinemas</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+        <div class="nav-profile-container">
+            <a href="#">Hello, Vedant <img src="me.jpg" alt="Your Face" class="nav-profile"></a>
+        </div>
+    </nav>
+    <div class="background" style="background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%),
+    url('infinity.jpg') no-repeat center top / cover;">
+        <div class="content">
+            <h1>Your Content Here</h1>
+            <p>This is an example of a seamless background transition.</p>
+        </div>
+        <div class="film container">
+            <div class="film-info">
+                <small class="film-title-small">Avengers by Stan Leer</small>
+                <h1 class="film-title">Avengers: Infinity War</h1>
+                <p class="film-description">
+                    As the Avengers and their allies continue to defend the world from a variety of dangers that a single superhero could not cope with, a new threat from outer space: Thanos. The intergalactic tyrant pursues the goal of collecting all six Infinity Stones - artifacts of incredible power, with which you can change reality at will. Everything the Avengers have encountered before has led to this moment - the fate of Earth has never been so uncertain.
+                </p>
+                <div class="film-details">
+                    <div class="time">
+                        <img src="time.png" alt="clock" class="time-icon" />
+                        <span class="time-counter">149 minutes</span>
+                    </div>
+                    <div class="rating">
+                        <img src="imdb.png" alt="imdb logo" class="rating-icon" />
+                        <span class="rating-counter"> <strong class="rating-current">9.2</strong> / 10 </span>
+                    </div>
+                </div>
+            </div>
+            <a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=6ZfuNTqbHE8&ab_channel=MarvelEntertainment" class="film-trailer" href="#">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="50" fill="white" />
+                    <g clip-path="url(#clip0)">
+                        <path d="M43.0758 30.0033C39.3071 27.8416 36.2518 29.6125 36.2518 33.9556V66.0059C36.2518 70.3533 39.3071 72.1219 43.0758 69.9623L71.0893 53.8967C74.8592 51.7342 74.8592 48.2306 71.0893 46.0686L43.0758 30.0033Z" fill="#F20D01"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="41.8013" height="41.8013" fill="white" transform="translate(34.1837 29.0816)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+        <div class="session container">
+            <div class="session-date">
+                <span class="session-label">Date</span>
+                <div class="session-date-block">
+                    <div class="session-date-item">
+                        <span class="session-month">July</span>
+                        <span class="session-day">15</span>
+                        <span class="session-week">M</span>
+                    </div>
+                    <div class="session-date-item">
+                        <span class="session-month">July</span>
+                        <span class="session-day">16</span>
+                        <span class="session-week">T</span>
+                    </div>
+                    <div class="session-date-item">
+                        <span class="session-month">July</span>
+                        <span class="session-day">17</span>
+                        <span class="session-week">W</span>
+                    </div>
+                    <div class="session-date-item">
+                        <span class="session-month">July</span>
+                        <span class="session-day">18</span>
+                        <span class="session-week">T</span>
+                    </div>
+                </div>
+            </div>
+            <div class="session-cinema">
+                <span class="session-label">Cinema</span>
+                <select class="select select-cinema" name="cinema">
+                  <option value="NCS">NCS Square mall</option>
+                  <option value="Centre">City centre mall</option>
+                </select>
+            </div>
+            <div class="session-time">
+                <span class="session-label">Time</span>
+                <select class="select" name="cinema">
+                  <option value="12:00">12:00</option>
+                  <option value="16:30">16:30</option>
+                  <option value="17:25">17:25</option>
+                </select>
+              </div>
+        </div>
+    </div>
+    <div class="seat infinitySeat" id="seating">
+        <div class="row">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <div class="separator seperatorInfinity"></div>
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+        </div>
+        <div class="row">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <div class="separator seperatorInfinity"></div>
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+        </div>
+        <div class="row">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable" >
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <div class="separator seperatorInfinity"></div>
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+        </div>
+        <div class="row">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <div class="separator"></div>
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+        </div>
+        <div class="row">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <div class="separator seperatorInfinity"></div>
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon  unavailable">
+        </div>
+        <div class="row">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+        </div>
+        <div class="row">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+        </div>
+        <div class="row">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+        </div>
+        <div class="row">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+        </div> 
+        <div class="row">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="unavailable.png" class="seat-icon unavailable">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+            <img src="available.png" class="seat-icon available">
+        </div>
+    </div>
+    <div class="options optionsInfinity">
+        <span><img src="available.png"> Available</span>
+        <span><img src="unavailable.png"> Unvailable</span>
+        <span><img src="select.png"> Choosed</span>
+    </div>
+    <div class="pay payInfinity">
+        <span id="selected-count"> 0</span>
+        <button class="pay-button">Pay Now</button>
+    </div>
+</body>
+</html>
